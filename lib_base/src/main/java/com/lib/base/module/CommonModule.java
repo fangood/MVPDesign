@@ -6,6 +6,7 @@ import com.lib.base.view.ICommonView;
 import dagger.Module;
 import dagger.Provides;
 
+
 @Module
 public class CommonModule {
 
