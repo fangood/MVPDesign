@@ -1,23 +1,13 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion build_versions.compile_sdk
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
-    }
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-        }
     }
 }
 
@@ -27,5 +17,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation  deps.support.runner
     androidTestImplementation  deps.support.espressocore
+    api deps.dagger.drgger
+    annotationProcessor deps.dagger.compiler
     
 }
