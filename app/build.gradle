@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion build_versions.compile_sdk
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.zj.mvp.demo.app"
         minSdkVersion build_versions.min_sdk
@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildToolsVersion build_versions.build_tools
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {

@@ -12,12 +12,11 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':base')
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation  deps.support.runner
-    androidTestImplementation  deps.support.espressocore
+    androidTestImplementation deps.support.runner
+    androidTestImplementation deps.support.espressocore
     api deps.dagger.drgger
     annotationProcessor deps.dagger.compiler
-    
 }
